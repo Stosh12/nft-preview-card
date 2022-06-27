@@ -17,10 +17,9 @@ body {
 
 }
 .nft-card {
-    /* background-image: url("../images/nft-mobile-template-50.png"); */
+    /* background-image: url("../images/guide-templates/nft-mobile-template-50.png"); */
     display: block;
     position: relative;
-    top: 50%;
     width: 328px;
     height: 543px;
     margin: 15% auto 0px auto;
@@ -30,7 +29,7 @@ body {
     box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, .4);
 }
 .equilibrium-image-holder {
-    padding: 25px 25px 20px 25px;
+    padding: 25px 25px 24px 25px;
     height: 278px;
     /* outline: 1px solid red; */
 }
@@ -42,14 +41,17 @@ body {
     background-size: cover;
     border-radius: 12px;
 }
-.equilibrium-image:hover {
-    position: relative;
-    background-image: url("../images/image-equilibrium.jpg"), url("../images/icon-view.svg");
-    background-color: rgba(0, 128, 123, 1);
-    background-blend-mode: screen;
+.equilibrium-image:hover::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("../images/icon-view.svg");
     background-repeat: no-repeat;
-    background-size: cover, 18%;
-    background-position: center;
+    background-position: 50%;
+    background-color: hsla(178, 100%, 50%, .5);
     border-radius: 12px;
 }
 .equilibrium-image img:hover {
@@ -117,11 +119,11 @@ hr {
 }
 .creator-image {
     position: relative;
-    width: 12%;
-    height: 12%;
+    width: 11%;
+    height: 11%;
     border: 1px solid hsl(0, 0%, 100%);
     border-radius: 100%;
-    margin: 0px 13px 0px 0px;
+    margin: 1px 15px 0px 0px;
     /* outline: 1px solid red; */
 }
 .creator-tag {
@@ -131,10 +133,12 @@ hr {
     font-weight: 300;
     font-size: 16px;
     color: hsl(215, 51%, 70%);
+    letter-spacing: -.025em;
     /* outline: 1px solid red; */
 }
 .creator-name {
     top: 4px;
+    letter-spacing: -.025em;
 }
 .creator-name a {
     color:hsl(0, 0%, 100%);
@@ -151,4 +155,42 @@ hr {
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+.attribution a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+@media screen and (min-width: 1025px) {
+    .nft-card {
+        /* background-image: url("../images/guide-templates/desktop-preview-template-50.png"); */
+        width: 350px;
+        height: 596px;
+        margin: 10.5% auto 0px auto;
+    }
+    .equilibrium-image-holder {
+        padding: 25px 25px 25px 25px;
+        height: 300px;
+    }
+    p {
+        top: 17px;
+        font-size: 18px;
+    }
+    ul {
+        margin: 38px 0px 0px 0px;
+    }
+    hr {
+        margin: 24px auto 14px auto;
+    }
+    .creator-image {
+        width: 10%;
+        height: 10%;
+        margin: 2px 16px 0px 0px;
+    }
+    .creator-tag {
+        letter-spacing: 0em;
+    }
+    .creator-name {
+        font-size: 16px;
+        letter-spacing: 0em;
+    }
 }
