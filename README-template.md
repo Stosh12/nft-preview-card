@@ -24,12 +24,17 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 Users should be able to:
 
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
+- View the two optimal layouts depending on their device's screen size, as listed here.
+  - A mobile layout that maintains its size from 375px – 1224px.
+  - A desktop layout that maintains its size 1225px – infinity and beyond.
+- See the hover states for three interactive elements, as described below.
+  - On hover the main NFT cover image of the transparent cube will show a cyan color overlay with an "eye ball" icon overlaying it.
+  - On hover the main heading text "Equilibrium #3429" will change from white to cyan.
+  - On hover the creator's name text "Jules Wyvern" will change from white to cyan.
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop View](images/guide-templates/desktop-preview-template-100.png/)
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
