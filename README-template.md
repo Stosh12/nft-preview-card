@@ -92,7 +92,7 @@ Hence, I moved to using a CSS pseudo-element with a hover state added to create 
 ```
 <br>
 
-**CSS pseudo-element**
+**CSS pseudo-element**  
 This is the CSS for the pseudo-element cyan background color overlay over the NFT cube image, which is used in the final solution:
 
 ```css
@@ -120,7 +120,7 @@ This is the CSS for the pseudo-element cyan background color overlay over the NF
 ```
 <br>
 
-**CSS background blending mode**
+**CSS background blending mode**  
 This is the CSS before I finally chose to us the pseudo class. This is based on the background blending mode of screen. Also, it uses two background images, which are the NFT cube image and the eye icon.
 
 ```css
