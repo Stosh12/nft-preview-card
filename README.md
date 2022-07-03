@@ -1,92 +1,170 @@
-# Frontend Mentor - NFT preview card component
+# Frontend Mentor - NFT preview card component solution
 
-![Design preview for the NFT preview card component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+### The challenge
 
-## The challenge
+Users should be able to:
 
-Your challenge is to build out this preview card component and get it looking as close to the design as possible.
+- View the two optimal layouts depending on their device's screen size, as listed here.
+  1. A mobile layout that maintains its size from 375px. – 1224px.
+  2. A desktop layout that maintains its size 1225px. – infinity and beyond.
+- See the hover states for the three interactive elements, as described below.
+  1. On hover the main NFT cover image of the transparent cube will show a cyan color overlay with an "eye ball" icon overlaying it.
+  2. On hover the main heading text "Equilibrium #3429" will change from white to cyan.
+  3. On hover the creator's name text "Jules Wyvern" will change from white to cyan.
+- Additional non-required hovers
+  - Credit line text: Frontend Mentor change from white to cyan.
+  - Credit line text: coder's name change from white to cyan.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+  <br>
 
-Your users should be able to:
+### Screenshots
 
-- View the optimal layout depending on their device's screen size
-- See hover states for interactive elements
+![Mobile View](images/readme-images/nft-mobile-screen-grabs-01-01.png)
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+![Desktop View](images/readme-images/nft-desktop-screen-grab-01-01.png)
 
-## Where to find everything
+The two screenshots above represent this solution as viewed in the Safari web browser on the Mac. Both screenshots are at 100%. It is interesting to note the card sizes differ between the mobile and desktop views; hence, the mobile view is only slightly smaller than the desktop view. This solution's code and layout reflects that difference at the proper view sizes required for this challenge (375px. and 1440px.).
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+The mobile view is present from 375px. – 1224px. and then the desktop view engages at 1225px. to infinity and beyond…
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### Links
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+- Solution URL: [NFT Preview Card Challenge](https://stosh12.github.io/nft-preview-card/)
+- Live Site URL: [NFT Preview Card Challenge](https://stosh12.github.io/nft-preview-card/)
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
 
-## Building your project
+## My process
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+I followed pretty closely the readme instructions that originally came with this challenge. I began with coding the HTML first mostly and then added my styles in separate CSS file. Then as things became a little more challenging and problem solving was needed I would switch back between both.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+I started with the mobile view first and then worked forwards to the desktop view. The desktop view engages media query at 1225px.
 
-## Deploying your project
+To keep images, graphics and text aligned as best as I could, I used a screened back template image of each design mockup placed within the main card holder divs of both the mobile and desktop views. This way, I could adjust margins, text, images and border sizes to get a solution that was almost right on to the design mockups, which were provided.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+I used VSCode as my coding application of choice with its "Live Server" extension and previewed my layout within Apple's Safari web browser on the Mac and then later tested it within the Chrome web browser on the Mac. Both rendered the same results. While coding semantic HTML5 markup was used as best as one could on this project. Since, it was a card only, the main semantic elements that were used were the "section" and the "h1" tags.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+Additionally, list items were used for ETH value and days left items with display of flexbox on the "ul" element to get these two items to move to the left and right sides of the card.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
 
-## Create a custom `README.md`
+### Built with
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- A CSS pseudo-element
+- VSCode
+- Apple Safari and Google Chrome Web browsers
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### What I learned
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+While creating the mouse over or hover overlay for the NFT image, I learned more about CSS blending modes and adding multiple background images to a single CSS selector. My first attempt at creating this overlay involved using the screen blending mode for the background image of the NFT cube to create the appearance of a cyan overlay with the eye, another background image, in the center on top. Everything worked out fine except the overlay seemed to have a little more saturation and brightness in it than expected relative to the NFT cube. At this point it looked like using the normal blending mode at 50% would be the best solution; but one can't create a semi-transparent or transparent overlay in normal mode; so, I had to go another route.
 
-## Submitting your solution
+Hence, I moved to using a CSS pseudo-element with a hover state added to create this overlay with a background in normal mode. Here, I could adjust the alpha channel of the background color to 50% to get the transparency I needed where the saturation of the NFT cube with the overlay was closer to what was present in the mockup. This was a little challenging; but seemed to workout in the end. Show below is the HTML and CSS code I used for both methods.
+<br>
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+**HTML that contains the div element (equilibrium-image) that holds NFT cube image**
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+```html
+<div class="equilibrium-image-holder">
+  <a href="#"><div class="equilibrium-image"></div></a>
+  </div>
+```
+<br>
 
-## Sharing your solution
+**CSS pseudo-element**  
+This is the CSS for the pseudo-element cyan background color overlay over the NFT cube image, which is used in the final solution:
 
-There are multiple places you can share your solution:
+```css
+.equilibrium-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/image-equilibrium.jpg");
+    background-size: cover;
+    border-radius: 12px;
+}
+.equilibrium-image:hover::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("../images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: hsla(178, 100%, 50%, .5);
+    border-radius: 12px;
+}
+```
+<br>
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+**CSS background blending mode**  
+This is the CSS before I finally chose to us the pseudo class. This is based on the background blending mode of screen. Also, it uses two background images, which are the NFT cube image and the eye icon.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+```css
+.equilibrium-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/image-equilibrium.jpg");
+    background-size: cover;
+    border-radius: 12px;
+}
+.equilibrium-image:hover {
+    position: relative;
+    background-image: url("../images/image-equilibrium.jpg"), url("../images/icon-view.svg");
+    background-color: rgba(0, 128, 123, 1);
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-size: cover, 18%;
+    background-position: center;
+    border-radius: 12px;
+}
+```
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+### Continued development
 
-## Got feedback for us?
+I may be working on more Frontend Mentor projects in the future to help enhance my coding skills. Also, I plan to be learning more about JavaScript.
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+### Useful resources
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+- [coder coder! — How to change background-image opacity in CSS without affecting text | HTML/CSS](https://coder-coder.com/background-image-opacity/) — This reference helped me with pseudo-element background overlays.
+- [W3C CSS background-blend-mode Property](https://www.w3schools.com/cssref/pr_background-blend-mode.asp) — This reference helped me with background image blending modes.
+- [W3C CSS Multiple Backgrounds](https://www.w3schools.com/css/css3_backgrounds.asp) — This reference helped setting the parameters for multiple backgrounds independently within on CSS selector. This would include parameters like, background size and repeats.
 
-**Have fun building!** 🚀
+
+
+## Author
+
+This challenge was coded by Alan Perrow!
+
+- Frontend Mentor - [NFT Preview Card Challenge](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U)
+
+
+
+## Acknowledgments
+
+My thanks to those whose help I got from the **"Useful resources"** section references within this readme document! Thank you for publishing your Web knowledge on the internet for all to see!
+
