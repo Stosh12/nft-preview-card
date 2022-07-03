@@ -6,7 +6,7 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -16,8 +16,6 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -25,31 +23,47 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 Users should be able to:
 
 - View the two optimal layouts depending on their device's screen size, as listed here.
-  - A mobile layout that maintains its size from 375px – 1224px.
-  - A desktop layout that maintains its size 1225px – infinity and beyond.
-- See the hover states for three interactive elements, as described below.
-  - On hover the main NFT cover image of the transparent cube will show a cyan color overlay with an "eye ball" icon overlaying it.
-  - On hover the main heading text "Equilibrium #3429" will change from white to cyan.
-  - On hover the creator's name text "Jules Wyvern" will change from white to cyan.
+  1. A mobile layout that maintains its size from 375px. – 1224px.
+  2. A desktop layout that maintains its size 1225px. – infinity and beyond.
+- See the hover states for the three interactive elements, as described below.
+  1. On hover the main NFT cover image of the transparent cube will show a cyan color overlay with an "eye ball" icon overlaying it.
+  2. On hover the main heading text "Equilibrium #3429" will change from white to cyan.
+  3. On hover the creator's name text "Jules Wyvern" will change from white to cyan.
+- Additional non-required hovers
+  - Credit line text: Frontend Mentor change from white to cyan.
+  - Credit line text: coder's name change from white to cyan.
 
-### Screenshot
+  <br>
 
-![Desktop View](images/guide-templates/desktop-preview-template-100.png/)
+### Screenshots
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![Mobile View](images/readme-images/nft-mobile-screen-grabs-01-01.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+![Desktop View](images/readme-images/nft-desktop-screen-grab-01-01.png)
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+The two screenshots above represent this solution as viewed in the Safari web browser on the Mac. Both screenshots are at 100%. It is interesting to note the card sizes differ between the mobile and desktop views; hence, the mobile view is only slightly smaller than the desktop view. This solution's code and layout reflects that difference at the proper view sizes required for this challenge (375px. and 1440px.).
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+The mobile view is present from 375px. – 1224px. and then the desktop view engages at 1225px. to infinity and beyond…
+
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [NFT Preview Card Challenge](https://stosh12.github.io/nft-preview-card/)
+- Live Site URL: [NFT Preview Card Challenge](https://stosh12.github.io/nft-preview-card/)
+
 
 ## My process
+
+I followed pretty closely the readme instructions that originally came with this challenge. I began with coding the HTML first mostly and then added my styles in separate CSS file. Then as things became a little more challenging and problem solving was needed I would switch back between both.
+
+I started with the mobile view first and then worked forwards to the desktop view. The desktop view engages media query at 1225px.
+
+To keep images, graphics and text aligned as best as I could, I used a screened back template image of each design mockup placed within the main card holder divs of both the mobile and desktop views. This way, I could adjust margins, text, images and border sizes to get a solution that was almost right on to the design mockups, which were provided.
+
+I used VSCode as my coding application of choice with its "Live Server" extension and previewed my layout within Apple's Safari web browser on the Mac and then later tested it within the Chrome web browser on the Mac. Both rendered the same results. While coding semantic HTML5 markup was used as best as one could on this project. Since, it was a card only, the main semantic elements that were used were the "section" and the "h1" tags.
+
+Additionally, list items were used for ETH value and days left items with display of flexbox on the "ul" element to get these two items to move to the left and right sides of the card.
+
 
 ### Built with
 
@@ -58,59 +72,99 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- A CSS pseudo-element
+- VSCode
+- Apple Safari and Google Chrome Web browsers
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+While creating the mouse over or hover overlay for the NFT image, I learned more about CSS blending modes and adding multiple background images to a single CSS selector. My first attempt at creating this overlay involved using the screen blending mode for the background image of the NFT cube to create the appearance of a cyan overlay with the eye, another background image, in the center on top. Everything worked out fine except the overlay seemed to have a little more saturation and brightness in it than expected relative to the NFT cube. At this point it looked like using the normal blending mode at 50% would be the best solution; but one can't create a semi-transparent or transparent overlay in normal mode; so, I had to go another route.
 
-To see how you can add code snippets, see below:
+Hence, I moved to using a CSS pseudo-element with a hover state added to create this overlay with a background in normal mode. Here, I could adjust the alpha channel of the background color to 50% to get the transparency I needed where the saturation of the NFT cube with the overlay was closer to what was present in the mockup. This was a little challenging; but seemed to workout in the end. Show below is the HTML and CSS code I used for both methods.
+<br>
+
+**HTML that contains the div element (equilibrium-image) that holds NFT cube image**
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="equilibrium-image-holder">
+  <a href="#"><div class="equilibrium-image"></div></a>
+  </div>
 ```
+<br>
+
+**CSS pseudo-element**
+This is the CSS for the pseudo-element cyan background color overlay over the NFT cube image, which is used in the final solution:
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.equilibrium-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/image-equilibrium.jpg");
+    background-size: cover;
+    border-radius: 12px;
+}
+.equilibrium-image:hover::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("../images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: hsla(178, 100%, 50%, .5);
+    border-radius: 12px;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+<br>
+
+**CSS background blending mode**
+This is the CSS before I finally chose to us the pseudo class. This is based on the background blending mode of screen. Also, it uses two background images, which are the NFT cube image and the eye icon.
+
+```css
+.equilibrium-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/image-equilibrium.jpg");
+    background-size: cover;
+    border-radius: 12px;
+}
+.equilibrium-image:hover {
+    position: relative;
+    background-image: url("../images/image-equilibrium.jpg"), url("../images/icon-view.svg");
+    background-color: rgba(0, 128, 123, 1);
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-size: cover, 18%;
+    background-position: center;
+    border-radius: 12px;
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I may be working on more Frontend Mentor projects in the future to help enhance my coding skills. Also, I plan to be learning more about JavaScript.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [coder coder! — How to change background-image opacity in CSS without affecting text | HTML/CSS](https://coder-coder.com/background-image-opacity/) — This reference helped me with pseudo-element background overlays.
+- [W3C CSS background-blend-mode Property](https://www.w3schools.com/cssref/pr_background-blend-mode.asp) — This reference helped me with background image blending modes.
+- [W3C CSS Multiple Backgrounds](https://www.w3schools.com/css/css3_backgrounds.asp) — This reference helped setting the parameters for multiple backgrounds independently within on CSS selector. This would include parameters like, background size and repeats.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+This challenge was coded by Alan Perrow!
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [NFT Preview Card Challenge](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U)
+
+
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+My thanks to those whose help I got from the **"Useful resources"** section references within this readme document! Thank you for publishing your Web knowledge on the internet for all to see!
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

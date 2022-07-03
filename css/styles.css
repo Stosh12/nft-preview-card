@@ -54,9 +54,6 @@ body {
     background-color: hsla(178, 100%, 50%, .5);
     border-radius: 12px;
 }
-.equilibrium-image img:hover {
-    background-color: hsl(178, 100%, 50%);
-}
 .section-nft-01 {
     position: relative;
     margin: 0px 25px 0px 25px;
